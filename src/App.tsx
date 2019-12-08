@@ -1,21 +1,13 @@
 import React from 'react';
-import Styled from 'styled-components/native';
+import {TodoContextProvider} from '~/Context/Todo';
 
-const Container = Styled.View`
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-`;
-
-const Label = Styled.Text`
-    font-size: 24px;
-`;
+import Navigator from './Screen/Navigator';
 
 const App = () => {
   return (
-    <Container>
-      <Label>Hello world!</Label>
-    </Container>
+    <TodoContextProvider>
+      <Navigator />
+    </TodoContextProvider>
   );
 };
 
